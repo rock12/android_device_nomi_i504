@@ -324,6 +324,7 @@ on post-fs
 
     mkdir /data/nvram 2770 root system
     chmod 0770 /dev/nvram
+    symlink /nvdata /data/nvram
 
     chown radio radio /sys/kernel/ccci/boot
 
