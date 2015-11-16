@@ -1,0 +1,6 @@
+# Grant GPU access to all processes started by Zygote.
+# They need that to render the standard UI.
+allow appdomain gpu_device:chr_file rw_file_perms;
+allow untrusted_app dm_agent_binder_exec:file getattr;
+init_daemon_domain(batterywarning)
+binder_use(batterywarning)
