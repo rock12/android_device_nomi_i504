@@ -62,15 +62,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root//sbin/busybox:root/sbin/busybox \
     $(LOCAL_PATH)/rootdir/root/fstab.mt6580:root/fstab.mt6580 \
+    $(LOCAL_PATH)/rootdir/root/init.aee.rc:root/init.aee.rc \
     $(LOCAL_PATH)/rootdir/root/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
     $(LOCAL_PATH)/rootdir/root/init.rc:root/init.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.rc:root/init.mt6580.rc \
     $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc \
-    $(LOCAL_PATH)/rootdir/root/init.fuse.rc:root/init.fuse.rc \
+    $(LOCAL_PATH)/rootdir/root/init.ssd.rc:root/init.ssd.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/root/init.xlog.rc:root/init.xlog.rc \
-    $(LOCAL_PATH)/rootdir/root/ueventd.mt6580.rc:root/ueventd.mt6580.rc \
+    $(LOCAL_PATH)/rootdir/root/ueventd.rc:root/ueventd.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
+    $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
+    $(LOCAL_PATH)/rootdir/root/init.nvdata.rc:root/init.nvdata.rc \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
