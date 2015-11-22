@@ -81,9 +81,6 @@ DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
-    
-PRODUCT_PACKAGES += \
-    libxlog
 
 PRODUCT_PACKAGES += \
     audio.r_submix.default
