@@ -1,0 +1,8 @@
+# ==============================================
+# MTK Policy Rule
+# Policy for GMO Projects
+
+# Date : WK15.03
+# Operation : SQC1
+# Purpose : ALPS01911340 (MTK MTBF)
+allow installd platform_app_tmpfs:file { open read write getattr };
