@@ -26,3 +26,4 @@ Working:
 Not working/Bugs:
 - Modem
 - Sleep
+- Bluetooth
