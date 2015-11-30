@@ -269,7 +269,8 @@ BOARD_SEPOLICY_UNION += \
 	zpppd_gprs.te \
 	md_ctrl.te \
 	cmddumper.te \
-	tunman.te
+	tunman.te \
+	strace.te
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
