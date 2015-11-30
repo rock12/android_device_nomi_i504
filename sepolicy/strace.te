@@ -29,3 +29,4 @@ init_daemon_domain(strace)
 allow strace  property_type:property_service set;
 allow strace  ccci_mdinit:process { ptrace };
 allow init    init:capability { sys_ptrace };
+allow init    init:process { ptrace };

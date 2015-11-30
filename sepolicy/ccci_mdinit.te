@@ -85,3 +85,6 @@ allow ccci_mdinit mtk_tele_prop:property_service set;
 allow ccci_mdinit devpts:chr_file { getattr read write };
 
 allow init ccci_mdinit:process { ptrace };
+
+allow ccci_mdinit ccci_mdinit:capability { dac_override };
+

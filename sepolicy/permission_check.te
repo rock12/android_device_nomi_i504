@@ -32,7 +32,7 @@ allow permission_check nvram_data_file:dir { rw_dir_perms setattr };
 allow permission_check nvram_data_file:file { write create open setattr getattr };
 allow permission_check nvram_data_file:lnk_file read;
 allow permission_check nvdata_file:dir { rw_dir_perms setattr };
-allow permission_check nvdata_file:file { write create open setattr getattr };
+allow permission_check nvdata_file:file { read write create open setattr getattr };
 
 allow permission_check property_socket:sock_file write;
 
