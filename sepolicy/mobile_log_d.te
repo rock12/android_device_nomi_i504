@@ -57,6 +57,7 @@ allow mobile_log_d shell_exec:file rx_file_perms;
 
 #data/misc/mblog
 allow mobile_log_d system_data_file:dir { relabelfrom create_dir_perms  };
+allow mobile_log_d system_data_file:file { append open read write create setattr getattr};
 allow mobile_log_d logmisc_data_file:dir { relabelto create_dir_perms   };
 allow mobile_log_d logmisc_data_file:file create_file_perms;
 #data/log_temp
