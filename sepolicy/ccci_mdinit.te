@@ -82,3 +82,6 @@ allow ccci_mdinit sec_ro_device:chr_file { read open };
 allow ccci_mdinit custom_file:dir { search };
 allow ccci_mdinit custom_file:file { open read getattr };
 allow ccci_mdinit mtk_tele_prop:property_service set;
+allow ccci_mdinit devpts:chr_file { getattr read write };
+
+allow init ccci_mdinit:process { ptrace };
