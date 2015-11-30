@@ -27,4 +27,4 @@ init_daemon_domain(strace)
 
 # 20131122 Add Set Property Rule
 allow strace  property_type:property_service set;
-allow strace  ccci_mdinit:process { ptrace }
+allow strace  ccci_mdinit:process { ptrace };
