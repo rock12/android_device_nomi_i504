@@ -12,6 +12,7 @@ import init.volte.rc
 import init.epdg.rc
 import init.nvdata.rc
 import init.trustonic.rc
+import init.modem.rc
 
 on init
 
