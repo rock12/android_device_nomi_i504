@@ -22,8 +22,11 @@ Working:
 - Wi-Fi
 - HW composer
 - Camera for taking pictures (not video)
+- Modem
+- Bluetooth
 
 Not working/Bugs:
-- Modem
 - Sleep
-- Bluetooth
+- GPS
+- Wi-Fi tethering
+- Mobile internet
