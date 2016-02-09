@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+# AGPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+    
 # Audio	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
@@ -61,10 +65,10 @@ PRODUCT_COPY_FILES += \
 # RAMDISK
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root//sbin/busybox:root/sbin/busybox \
+    $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh \
     $(LOCAL_PATH)/rootdir/root/fstab.mt6580:root/fstab.mt6580 \
     $(LOCAL_PATH)/rootdir/root/init.aee.rc:root/init.aee.rc \
     $(LOCAL_PATH)/rootdir/root/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
-    $(LOCAL_PATH)/rootdir/root/init.rc:root/init.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.rc:root/init.mt6580.rc \
     $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/rootdir/root/init.ssd.rc:root/init.ssd.rc \
@@ -74,9 +78,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
     $(LOCAL_PATH)/rootdir/root/init.nvdata.rc:root/init.nvdata.rc \
-    $(LOCAL_PATH)/rootdir/root/meta_init.modem.rc:root/meta_init.modem.rc \
-    $(LOCAL_PATH)/rootdir/root/meta_init.project.rc:root/meta_init.project.rc \
-    $(LOCAL_PATH)/rootdir/root/meta_init.rc:root/meta_init.rc \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
@@ -86,14 +87,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_PACKAGES += \
+    libxlog
+    
+PRODUCT_PACKAGES += \
+    audio_policy.default \
+    audio.a2dp.default \
+    audio.usb.default \
     audio.r_submix.default
 
+# Bluetooth
 PRODUCT_PACKAGES += \
-    libbt-vendor
+    libbt-vendor \
 
-PRODUCT_PACKAGES += \
-    gsm0710muxd
-
+#PRODUCT_PACKAGES += \
+#    gsm0710muxd
+    
 PRODUCT_PACKAGES += \
     libwpa_client \
     dhcpcd.conf \
