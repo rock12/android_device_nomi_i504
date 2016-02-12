@@ -20,13 +20,15 @@ Working:
 - Audio
 - Sensors
 - Wi-Fi
-- HW composer
 - Camera for taking pictures (not video)
 - Modem
+- USSD
 - Bluetooth
+- Sleep
 
 Not working/Bugs:
-- Sleep
+- HW composer
+- Video recording
 - GPS
 - Wi-Fi tethering
 - Mobile internet
