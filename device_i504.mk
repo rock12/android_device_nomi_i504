@@ -99,9 +99,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
-
-#PRODUCT_PACKAGES += \
-#    gsm0710muxd
     
 PRODUCT_PACKAGES += \
     libwpa_client \
