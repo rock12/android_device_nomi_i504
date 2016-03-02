@@ -23,7 +23,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:system/etc/permissions/android.hardware.faketouch.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -44,6 +43,12 @@ PRODUCT_COPY_FILES += \
 # AGPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+
+# Telecom
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/ecc_list.xml:system/etc/ecc_list.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/spn-conf.xml:system/etc/spn-conf.xml \
     
 # Audio	
 PRODUCT_COPY_FILES += \
@@ -52,10 +57,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
     $(LOCAL_PATH)/rootdir/system/etc/audio_device.xml:system/etc/audio_device.xml \
     $(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/rootdir/system/etc/tp/thermal.conf:system/etc/.tp/thermal.conf
+     $(LOCAL_PATH)/rootdir/system/etc/tp/thermal.conf:system/etc/.tp/thermal.conf \
+     $(LOCAL_PATH)/rootdir/system/etc/tp/thermal.off.conf:system/etc/.tp/thermal.off.conf
 	
 # Keylayout
 PRODUCT_COPY_FILES += \
