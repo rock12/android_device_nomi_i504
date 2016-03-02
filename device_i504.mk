@@ -74,7 +74,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root//sbin/busybox:root/sbin/busybox \
     $(LOCAL_PATH)/rootdir/root/enableswap.sh:root/enableswap.sh \
     $(LOCAL_PATH)/rootdir/root/fstab.mt6580:root/fstab.mt6580 \
-    $(LOCAL_PATH)/rootdir/root/init.aee.rc:root/init.aee.rc \
     $(LOCAL_PATH)/rootdir/root/init.recovery.mt6580.rc:root/init.recovery.mt6580.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.rc:root/init.mt6580.rc \
     $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc \
