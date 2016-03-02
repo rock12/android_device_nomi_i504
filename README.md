@@ -25,10 +25,10 @@ Working:
 - USSD
 - Bluetooth
 - Sleep
+- Mobile internet
 
 Not working/Bugs:
 - HW composer
 - Video recording
 - GPS
 - Wi-Fi tethering
-- Mobile internet
