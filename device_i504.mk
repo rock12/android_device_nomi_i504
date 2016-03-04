@@ -79,7 +79,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/rootdir/root/init.ssd.rc:root/init.ssd.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/rootdir/root/init.xlog.rc:root/init.xlog.rc \
     $(LOCAL_PATH)/rootdir/root/ueventd.rc:root/ueventd.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
