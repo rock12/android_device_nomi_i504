@@ -58,9 +58,9 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 -
 BOARD_CUSTOM_BOOTIMG := true
 TARGET_PREBUILT_RECOVERY_KERNEL := device/nomi/i504/kernel
 
-TARGET_RECOVERY_FSTAB := device/nomi/i504/rootdir/root/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/nomi/i504/rootdir/root/fstab.mt6580
 
-TARGET_OTA_ASSERT_DEVICE := i504,nomi_i504
+TARGET_OTA_ASSERT_DEVICE := i504,nomi_i504,"Nomi i504"
 # TWRP
 DEVICE_RESOLUTION := 720x1280
 TARGET_SCREEN_HEIGHT := 1280
