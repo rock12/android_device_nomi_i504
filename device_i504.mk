@@ -7,7 +7,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/nomi/i504/i504-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_CHARACTERISTICS := default
 
 LOCAL_PATH := device/nomi/i504
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -107,6 +107,7 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     libwpa_client \
+    hostapd \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
