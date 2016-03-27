@@ -26,9 +26,9 @@ Working:
 - Bluetooth
 - Sleep
 - Mobile internet
+- Wi-Fi tethering
 
 Not working/Bugs:
 - HW composer
 - Video recording
 - GPS
-- Wi-Fi tethering
