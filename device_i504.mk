@@ -104,6 +104,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    	libgralloc_extra
 
+# hack to fix asec on emulated sdcard
+PRODUCT_PACKAGES += \
+    asec_helper
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
