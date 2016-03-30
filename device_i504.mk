@@ -86,7 +86,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
-    
+
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
