@@ -101,6 +101,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libdashplayer
 
+PRODUCT_PACKAGES += \
+   	libgralloc_extra
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
