@@ -4,6 +4,7 @@ import init.project.rc
 import init.ssd.rc
 import init.nvdata.rc
 import init.modem.rc
+import init.mt6580.power.rc
 
 on init
 
@@ -1546,10 +1547,3 @@ service ipo_swap /system/bin/ipo_swap
     user root
     group root
     oneshot
-
-on property:sys.perf.profile=1
-    write /sys/devices/system/cpu/cpu2/online "1"
-    write /sys/devices/system/cpu/cpu3/online "1"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1300000"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "604500"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
