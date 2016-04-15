@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.usb.rc:root/init.mt6580.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
     $(LOCAL_PATH)/rootdir/root/init.nvdata.rc:root/init.nvdata.rc \
+    $(LOCAL_PATH)/rootdir/root/init.mt6580.power.rc:root/init.mt6580.power.rc \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
@@ -97,6 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio_policy.default \
     audio.a2dp.default \
+    audio_policy.stub \
     audio.usb.default \
     audio.r_submix.default \
     libdashplayer
@@ -116,22 +118,28 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     dhcpcd.conf \
+    hostapd_cli \
     wpa_supplicant \
     wpa_supplicant.conf
 
+PRODUCT_PACKAGES += \
+    libion \
+    
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
     ro.secure=0 \
     ro.adb.secure=0 \
     ro.allow.mock.location=1 \
     ro.debuggable=1 \
     ro.zygote=zygote32 \
-    persist.sys.usb.config=mtp
-
+    persist.sys.usb.config=mtp \
+    
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0 \
     ro.allow.mock.location=1 \
-    ro.debuggable=1
+    ro.debuggable=1 \
+    persist.service.acm.enable=0 \
+    ro.oem_unlock_supported=1 \
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
