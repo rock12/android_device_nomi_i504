@@ -24,11 +24,11 @@ Working:
 - Modem
 - USSD
 - Bluetooth
-- Sleep
 - Mobile internet
 - Wi-Fi tethering
+- GPS
 
 Not working/Bugs:
 - HW composer
 - Video recording
-- GPS
+- Sleep
