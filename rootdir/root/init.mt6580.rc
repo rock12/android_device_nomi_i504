@@ -180,6 +180,13 @@ on post-fs-data
 		chmod 0660 /dev/irtx
 		chown system system /dev/irtx
 
+    #liuyang add begin
+    chown root   radio  /sys/class/leds/red/brightness
+    chown root   radio  /sys/class/leds/green/brightness
+    chown root   radio  /sys/class/leds/blue/brightness
+    chown root   radio  /sys/class/leds/breathing-light/brightness
+    #liuyang add end
+    
     # Touch Panel
     # chmod 0664 /dev/touch
     chown root diag /sys/module/tpd_setting/parameters/tpd_calmat
@@ -420,9 +427,52 @@ on post-fs-data
     #sensorhub
     chmod 0660 /dev/shf
     chown system system /dev/shf
-       
+#add for bmc156d acc
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsdata
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsrange
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsbandwidth
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsopmode
+    chmod 0660 /sys/bus/platform/drivers/gsensor/fifo_mode
+    chmod 0660 /sys/bus/platform/drivers/gsensor/fifo_data_frame
+    chmod 0660 /sys/bus/platform/drivers/gsensor/fifo_framecount
+    chown system system /sys/bus/platform/drivers/gsensor/cpsdata
+    chown system system /sys/bus/platform/drivers/gsensor/cpsrange
+    chown system system /sys/bus/platform/drivers/gsensor/cpsbandwidth
+    chown system system /sys/bus/platform/drivers/gsensor/cpsopmode
+    chown system system /sys/bus/platform/drivers/gsensor/fifo_mode
+    chown system system /sys/bus/platform/drivers/gsensor/fifo_data_frame
+    chown system system /sys/bus/platform/drivers/gsensor/fifo_framecount
+#add for bmg160 gyroscope
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/rawdata
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/datarate
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/range
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/powermode
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/fifo_mode
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/fifo_data_frame
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/fifo_framecount
+    chown system system /sys/bus/platform/drivers/gyroscope/rawdata
+    chown system system /sys/bus/platform/drivers/gyroscope/datarate
+    chown system system /sys/bus/platform/drivers/gyroscope/range
+    chown system system /sys/bus/platform/drivers/gyroscope/powermode
+    chown system system /sys/bus/platform/drivers/gyroscope/fifo_mode
+    chown system system /sys/bus/platform/drivers/gyroscope/fifo_data_frame
+    chown system system /sys/bus/platform/drivers/gyroscope/fifo_framecount
+#add for bmc156d mag
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsdata
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsopmode
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsreptxy
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsreptz
+    chown system system /sys/bus/platform/drivers/msensor/cpsdata
+    chown system system /sys/bus/platform/drivers/msensor/cpsopmode
+    chown system system /sys/bus/platform/drivers/msensor/cpsreptxy
+    chown system system /sys/bus/platform/drivers/msensor/cpsreptz
+
     #Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
+
+    #add for memsic acc
+    chown root /system/bin/memsicp
+    chmod 0755 /system/bin/memsicp
 
     #VideoCodec
     #insmod /system/lib/modules/vcodec_kernel_driver.ko
@@ -584,6 +634,9 @@ on post-fs-data
     chmod 0660 /dev/ttyMT1
     chown system system /dev/ttyMT1
 
+    chmod 0660 /dev/ttyMT0
+    chown system system /dev/ttyMT0
+
     #TV-out
     chmod 0664 /dev/TV-out
 
@@ -615,6 +668,7 @@ on post-fs-data
     chmod 0660 /dev/FM50AF
     chmod 0660 /dev/DW9718AF
     chmod 0660 /dev/DW9814AF
+    chmod 0660 /dev/IMX164AF
     chmod 0660 /dev/CAM_CAL_DRV
 
     chown system camera /dev/camera-sysram
@@ -627,6 +681,7 @@ on post-fs-data
     chown system camera /dev/FM50AF
     chown system camera /dev/DW9718AF
     chown system camera /dev/DW9814AF
+    chown system camera /dev/IMX164AF
     chown system camera /dev/CAM_CAL_DRV
 
     #MATV
@@ -749,6 +804,7 @@ on boot
     chmod 0770 /sys/power/tuxonice
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
+
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
 
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
@@ -775,6 +831,18 @@ on boot
     chown system system /sys/class/leds/red/trigger
     chown system system /sys/class/leds/green/trigger
     chown system system /sys/class/leds/blue/trigger
+#hct
+    chmod 0777 /sys/bus/platform/drivers/kd_camera_flashlight/flashContrl
+    chown system radio  /sys/bus/platform/drivers/kd_camera_flashlight/flashContrl
+    
+#hct
+
+    #liuyang add begin
+    chmod 0777 /sys/class/leds/red/brightness
+    chmod 0777 /sys/class/leds/green/brightness
+    chmod 0777 /sys/class/leds/blue/brightness
+    chmod 0777 /sys/class/leds/breathing-light/brightness
+    #liuyang add end
 
     # Permission for hibernation
     chown radio system /sys/power/tuxonice
@@ -828,6 +896,17 @@ on boot
     chown shell system /proc/driver/wmt_dbg
     chown shell system /proc/driver/wmt_aee
 
+#liuyang add begin
+    chmod 0777 /sys/class/leds/red/brightness
+    chmod 0777 /sys/class/leds/green/brightness
+    chmod 0777 /sys/class/leds/blue/brightness
+    chown root radio  /sys/class/leds/red/brightness
+    chown root radio  /sys/class/leds/green/brightness
+    chown root radio  /sys/class/leds/blue/brightness
+
+    chmod 0777 /sys/class/leds/breathing-light/brightness
+    chown root radio  /sys/class/leds/breathing-light/brightness
+#liuyang add end
 #Define device for ATCID
     chmod 0660 /dev/ttyGS0
     chown system /dev/ttyGS0
@@ -848,12 +927,14 @@ on property:vold.decrypt=trigger_reset_main
 on property:vold.decrypt=trigger_restart_min_framework
     start start_modem
     start msensord
+    start memsicp
     start permission_check
 
 on property:vold.decrypt=trigger_restart_framework
     start nvram_daemon
     start start_modem
     start msensord
+    start memsicp
     start permission_check
 		
 on property:vold.decrypt=trigger_shutdown_framework
@@ -891,11 +972,6 @@ on property:persist.uartconsole.enable=1
 # Update the second boot logo
 service bootlogoupdater /system/bin/boot_logo_updater
     class core
-    oneshot
-
-service mmc_ffu /system/bin/mmc_ffu do CS1_21.fluf /dev/block/mmcblk0 45 2020333330363030  2020323231323030
-    user root
-    class main
     oneshot
 
 service mobile_log_d /system/bin/mobile_log_d
@@ -1089,14 +1165,14 @@ service iprenew_p2p /system/bin/dhcpcd -n
 service dhcp_inform /system/bin/dhcpcd -s -BK -A
     class main
     user dhcp
-    group system radio dhcp
+    group system radio dhcp net_admin net_raw
     disabled
     oneshot
 
 service dhcpv6_inform /system/bin/dhcp6c -c "/etc/wide-dhcpv6/dhcp6cSIP.conf" -Dfi
     class main
     user dhcp
-    group system radio dhcp
+    group system radio dhcp net_admin net_raw
     disabled
     oneshot
 
@@ -1211,7 +1287,6 @@ service mtkbt /system/bin/mtkbt
 	socket bt.a2dp.stream dgram 660 bluetooth net_bt
 	user bluetooth
 	group system vpn net_admin inet net_raw net_bt bluetooth net_bt_admin net_bt_stack sdcard_r
-	oneshot
 
 
 #service dpfd /system/bin/dpfd
@@ -1251,20 +1326,20 @@ service agpsd /system/bin/mtk_agpsd
     socket agpsd stream 660 gps system
     socket agpsd2 stream 660 gps inet
     socket agpsd3 stream 660 gps inet
-    user root
-    group gps ccci radio inet sdcard_r sdcard_rw misc
+    user gps
+    group gps radio inet sdcard_r sdcard_rw misc
     oneshot
 
 service wifi2agps /system/bin/wifi2agps
     class main
-    user root
-    group gps ccci inet
+    user wifi
+    group gps inet
     oneshot
 
 service mnld /system/xbin/mnld
     class main
-    user root
-    group ccci gps inet misc sdcard_rw sdcard_r media_rw system
+    user gps
+    group gps inet misc sdcard_rw sdcard_r media_rw system
     socket mnld stream 660 gps system
     oneshot
 
@@ -1360,6 +1435,12 @@ service akmd8963 /system/bin/akmd8963
     group system
     class main
 
+service memsicp /system/bin/memsicp
+    oneshot
+    user system
+    group system
+    class main
+
 service akmd09911 /system/bin/akmd09911
     disabled
     user system
@@ -1372,6 +1453,16 @@ service bmm050d /system/bin/bmm050d
     class main
 
 service bmm056d /system/bin/bmm056d
+    disabled
+    user system
+    group system
+    class main
+service bmc156d /system/bin/bmc156d
+    disabled
+    user system
+    group system
+    class main
+service bmx056d /system/bin/bmx056d
     disabled
     user system
     group system
@@ -1453,6 +1544,13 @@ service NvRAMAgent /system/bin/nvram_agent_binder
     user system
     group system
 
+#hct:liuyang
+service NvRAMBackupAgent /system/bin/nvram_backup_binder
+    class main
+    user root
+    group system
+#hct:liuyang
+
 service thermal_manager /system/bin/thermal_manager
     class main
     user root
@@ -1501,7 +1599,7 @@ service BGW /system/xbin/BGW
 	user root
 	group gps system radio
 	class main
-        oneshot
+	oneshot
 
 service MtkCodecService /system/bin/MtkCodecService
     class main
