@@ -84,6 +84,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.trace.rc:root/init.trace.rc \
     $(LOCAL_PATH)/rootdir/root/init.nvdata.rc:root/init.nvdata.rc \
     $(LOCAL_PATH)/rootdir/root/init.mt6580.power.rc:root/init.mt6580.power.rc \
+    $(LOCAL_PATH)/rootdir/root/init.xlog.rc:root/init.xlog.rc \
+    $(LOCAL_PATH)/rootdir/root/init.aee.rc:root/init.aee.rc \
     $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += device/nomi/i504/overlay
