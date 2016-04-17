@@ -27,8 +27,8 @@ Working:
 - Mobile internet
 - Wi-Fi tethering
 - GPS
+- HW composer
+- Sleep
 
 Not working/Bugs:
-- HW composer
 - Video recording
-- Sleep
