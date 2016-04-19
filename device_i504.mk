@@ -18,6 +18,7 @@ endif
 
 # PERMISSIONS
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/platform.xml:system/etc/permissions/platform.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
@@ -95,7 +96,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_PACKAGES += \
-    libxlog
+    libxlog \
+    FMRadio
     
 PRODUCT_PACKAGES += \
     audio_policy.default \
