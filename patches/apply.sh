@@ -11,6 +11,6 @@ MYABSPATH=$(readlink -f "$0")
  		if [ -d "$CMBASE/$PATCHTARGET" ]; then break; fi
  	done
  	echo "Применение $PATCHNAME -> $PATCHTARGET"
- 	cd "$PATCHTARGET" || exit 1
+ 	cd "$CMBASE/$PATCHTARGET" || exit 1
  	git am -3 "$PATCHBASE/$PATCHNAME"/* || exit 1
  done
