@@ -49,7 +49,7 @@ service muxreport-daemon /system/bin/muxreport
     disabled
     oneshot
 
-service ril-daemon-mtk /system/bin/mtkrild
+service_redefine ril-daemon-mtk /system/bin/mtkrild
     class core
     socket rild stream 660 root radio
     socket rild2 stream 660 root radio
@@ -67,7 +67,7 @@ service ril-daemon-mtk /system/bin/mtkrild
     disabled
     oneshot
 
-service ril-daemon-mtkmd2 /system/bin/mtkrildmd2
+service_redefine ril-daemon-mtkmd2 /system/bin/mtkrildmd2
     class core
     socket rild-md2 stream 660 root radio
     socket rild2-md2 stream 660 root radio
